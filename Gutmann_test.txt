@@ -1,0 +1,4 @@
+﻿This file created to test secure erasing file, using algorithm "The Gutmann Method".
+Open this, before erasing, then do erasing this by double click on "Run_Gutmann.bat".
+After this - reopen this file. If you see random symbols, you can delete this file.
+After this action, this file cann't be recovered, even if magnet microscopy will be used to investigate your disk!
