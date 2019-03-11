@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 class Program
 {
-	private const int MAX_BUFFER_SIZE = 67108864;
+	private const int MAX_BUFFER_SIZE  = 64 * 1024 * 1024; // 64 MiB
 
     public static class ThreadSafeRandom
     {
@@ -60,10 +60,10 @@ class Program
 
             FileStream fs = new FileStream(file.FullName, FileMode.Open, FileAccess.Write, FileShare.None);
 
-			Console.WriteLine("Overwrite this file: ");
+            Console.WriteLine("Overwrite this file: ");
             for (int pass = 1; pass <= 35; ++pass)
             {
-				Console.Write( ( (pass<10)?"0":"") + pass + ( (pass%7==0)?" \n":" " ) );
+                Console.Write( ( (pass<10)?"0":"") + pass + ( (pass%7==0)?" \n":" " ) );
                 for (int index = 0; index < 3; index++)
                 {
                     fs.Position = 0;
